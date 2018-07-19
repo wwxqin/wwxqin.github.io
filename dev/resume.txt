@@ -5,8 +5,8 @@ WeihangQ@gmail.com                                                  240.463.8291
 Mathematics - Statistics Major, Economics Major, Computer Science Minor
 ********************************************************************************
 
-   Technical Skills: Python, Excel VBA, LaTex
-   Web & Design    : HTML/CSS, MySQL
+   Technical Skills: Python, Excel VBA
+   Web & Design    : HTML/CSS, SQL
 
 
 ***************
@@ -27,4 +27,4 @@ Education
 *********
 
    University of Maryland
-      - Dean's Honours List
+      - Dean's Honors List

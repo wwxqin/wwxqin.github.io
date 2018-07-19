@@ -30,8 +30,8 @@ var contact_txt =
         type: "txt",
         text: "E-mail: weihangq @ gmail.com\n\n" +
         	  "E-mail: wqin1 @ umd.edu\n\n" +
-              "LinkedIn: https://www.linkedin.com/\n\n" +
-              "GitHub: https://github.com/\n"
+              "LinkedIn: https://www.linkedin.com/in/weihang-qin-292846146\n\n" +
+              "GitHub: https://github.com/wqill\n"
     };
 
 var resume_pdf =
@@ -53,8 +53,8 @@ var resume_txt =
 \nMathematics - Statistics Major, Economics Major, Computer Science Minor\
 \n********************************************************************************\
 \n\
-\n   Technical Skills: Python, Excel VBA, LaTex\
-\n   Web & Design    : HTML/CSS, PHP/MySQL\
+\n   Technical Skills: Python, Excel VBA\
+\n   Web & Design    : HTML/CSS, SQL\
 \n\
 \n\
 \n***************\
@@ -75,7 +75,7 @@ var resume_txt =
 \n*********\
 \n\
 \n   University of Maryland\
-\n      - Dean's Honor List\
+\n      - Dean's Honors List\
 \n\
 "
     };
