@@ -15,7 +15,7 @@
 	<meta charset="utf-8">
 	<title> William Qin </title>
 	<meta name="Description" content="William Qin's website" />
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+	        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 
 
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -118,7 +118,6 @@ $.extend_if_has = function(desc, source, array) {
 })(jQuery);
 
 function main(command, terminal) {
-	
     var tokens = command.split(" ");
     if (tokens[0] == "ls") {
         for (var i = 0 ; i < curr.kids.length ; i++){
@@ -134,80 +133,78 @@ function main(command, terminal) {
             }
         }
     }
-    else if (tokens[0] == "cat") {
-        var found = false;
-        if (tokens.length > 1) {
-            for (var i = 0 ; i < curr.kids.length ; i++) {
-                if (curr.kids[i].type == "txt" && 
-               curr.kids[i].name == tokens[1]){
-                   terminal.echo(curr.kids[i].text);
-                   found = true;
-                   break;
-               }
-           } 
-           if (!found) {
-               terminal.echo('cat: ' + tokens[1] +': No such file');
-           }
-       }
-   }
-   else if (tokens[0] == "cd") {
-       if (tokens.length > 1) {
-           if (tokens[1] == "~"){
+    else if (tokens[0] == "cd") {
+		if (tokens.length > 1) {
+           	if (tokens[1] == "~"){
                curr = home;
                prev = home;
                terminal.push(main, curr.setg);
-           }
-           else if (tokens[1] == "..") {
-               if (curr != home)
-               {
+           	}
+           	else if (tokens[1] == "..") {
+               	if (curr != home) {
                    curr = curr.back;
                    terminal.pop();
-               }
-           }
-           else {
-
+               	}
+           	}
+          	else {
                 for (var i = 0 ; i < curr.kids.length ; i++) {
                     if (curr.kids[i].type == "folder" && 
                     curr.kids[i].name == tokens[1]){
                        curr = curr.kids[i];
                        found = true;
                        break;
-                   }
-               }
-               if (!found) {
+                   	}
+               	}
+               	if (!found) {
                    terminal.echo('cd : ' + tokens[1] +': No such directory');
-               } 
-               else {
+               	} 
+               	else {
                    terminal.push(main, curr.setg);
-               }
-          }
-       }
-   }
-   else if(tokens[0] == "open") {
-        var found = false;
+               	}
+          	}
+       	}
+   	}
+   	else if (tokens[0] == "open") {
+		var found = false;
         if (tokens.length > 1) {
             for (var i = 0 ; i < curr.kids.length ; i++) {
                 if (curr.kids[i].type == "pdf" && 
-               curr.kids[i].name == tokens[1]){
+               	curr.kids[i].name == tokens[1]){
                    window.open(curr.kids[i].link);
                    found = true;
                    break;
-               }
-               else if (curr.kids[i].type == "pic" && 
-               curr.kids[i].name == tokens[1]) {
+               	}
+               	else if (curr.kids[i].type == "pic" && 
+               	curr.kids[i].name == tokens[1]) {
                    changeImage(curr.kids[i].link);
                    found = true;
                    break;
-               }
-           } 
-           if (!found) {
+               	}
+           	} 
+           	if (!found) {
                terminal.echo('open: ' + tokens[1] +': No such file');
-           }
-       }
-   }
-    else{
-        terminal.echo(command + ': command not found');
-    }
+           	}
+       	}
+   	}
+   	else if(tokens[0] == "cat") {
+        var found = false;
+        if (tokens.length > 1) {
+            for (var i = 0 ; i < curr.kids.length ; i++) {
+                if (curr.kids[i].type == "txt" && 
+               	curr.kids[i].name == tokens[1]){
+                   terminal.echo(curr.kids[i].text);
+                   found = true;
+                   break;
+               	}
+          	} 
+           if (!found) {
+               terminal.echo('cat: ' + tokens[1] +': No such file');
+           	}
+       	}
+   	}
+   	else {
+   		terminal.echo(command + ': command not found');
+   	}
 }
 
 //--------------------------------------------------------------------------
@@ -222,26 +219,25 @@ jQuery(document).ready(function($) {
 </head>
 
 
-
 <body>
     <div id="tilda"></div>
 
+   <div class="centered card">
 	<div class="box">
 
-	<h1> William Qin </h1>
-	<h5> Student at University of Maryland, College Park </h5>
-
-<div class = "break"></div>
-<p> I am currently studying mathematics and economics and minoring in Computer Science. I'm looking for opportunities to diversify my skillset. </p>
-<p id="tilda"> Press ` on this page to open a terminal to navigate this website </p>
+		<p class="name">William Qin</p>
+		<p class="desc">Student at University of Maryland, College Park</p>
+		<hr>
+		<p class="info">I am currently studying Mathematics and Economics and minoring in Computer Science.</p>
+		<p id="tilda">Press ` on this page to open a terminal to navigate this website.</p>
     
-<div class="social-icons">
-<a href="https://www.linkedin.com/in/weihang-qin-292846146" target="_blank"><i class="fab fa-linkedin"></i></a>
-<a href="https://github.com/wqill" target="_blank"><i class="fab fa-github"></i></a>
-<a href="wqin_Resume.pdf"><i class="far fa-file-alt"></i></a>
-</div>
-
-</div>
+		<div class="social-icons">
+		<a href="https://www.linkedin.com/in/weihang-qin-292846146" target="_blank"><i class="fab fa-linkedin fax"></i></a>
+		<a href="https://github.com/wqill" target="_blank"><i class="fab fa-github fax"></i></a>
+		<a href="wqin_Resume.pdf"><i class="far fa-file-alt fax"></i></a>
+		</div>
+	</div>
+   </div>
 </body>
 
 </html>
