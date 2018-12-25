@@ -1,12 +1,12 @@
 ********************************************************************************
                                   William Qin
-WeihangQ@gmail.com                                                  240.463.8291
+williamwqin@gmail.com                                               240.463.8291
 
-Mathematics - Statistics Major, Economics Major, Computer Science Minor
+Computer Science Major, Mathematics/Statistics Major, Economics Major
 ********************************************************************************
 
-   Technical Skills: Python, Excel VBA
-   Web & Design    : HTML/CSS, SQL
+   Technical Skills: Java, SQL, C, Python, SAS, R, Excel VBA
+   Web & Design    : HTML, CSS, JavaScript
 
 
 ***************

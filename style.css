@@ -59,22 +59,26 @@ p {
 }
 
 .far {
-    text-align: center;
-    margin-top: 15px;
-    font-size: 50px;
-    padding: 25px;
-    color: white;
+  text-align: center;
+  text-decoration: none;
+  padding: 15px;
+  font-size: 30px;
+  width: 40px;
+  margin-top: 15px;
+  border-radius: 50%;
+  color: white;
 }
 
 .fab {
-    text-align: center;
-    margin-top: 15px;
-    font-size: 50px;
-    padding: 25px;
-    color: white;
+  text-align: center;
+  text-decoration: none;
+  padding: 15px;
+  font-size: 30px;
+  width: 40px;
+  margin-top: 15px;
+  border-radius: 50%;
+  color: white;
 }
-
-
 
 @media (max-height:400px) {
     .card {

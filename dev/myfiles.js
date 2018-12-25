@@ -48,13 +48,13 @@ var resume_txt =
         text: "\
 \n********************************************************************************\
 \n                                  William Qin\
-\nWeihangQ@gmail.com                                                  240.463.8291\
+\nwilliamwqin@gmail.com                                               240.463.8291\
 \n\
-\nMathematics - Statistics Major, Economics Major, Computer Science Minor\
+\nComputer Science Major, Mathematics/Statistics Major Economics Major\
 \n********************************************************************************\
 \n\
-\n   Technical Skills: Python, Excel VBA\
-\n   Web & Design    : HTML/CSS, SQL\
+\n   Technical Skills: Java, SQL, C, Python, SAS, R, Excel VBA\
+\n   Web & Design    : HTML, CSS, JavaScript\
 \n\
 \n\
 \n***************\
@@ -85,16 +85,16 @@ var welcome_txt =
         name: "welcome.txt",
         type: "txt",
         text: "[[b;aqua;black]Welcome to my website.]\n[[b;aqua;black]Please enjoy your stay.]\n\n[[b;red;black]Press ` to minimize the terminal.]\nAvailable commands are:\n" +
-              "[[b;red;black]cd], [[b;red;black]ls], [[b;red;black]cat], [[b;red;black]open], [[b;red;black]clear] \n"
+              "[[b;red;black]ls], [[b;aqua;black]cd], [[b;grey;black]cat], [[b;purple;black]open], [[b;red;black]clear] \n"
     };
 
-var art =
+var random =
     {
-        name: "Art",
+        name: "Random",
         type: "folder",
         kids: [],
         back: projects,
-        setg: { prompt: '[[b;lawngreen;black]william.qin:/Projects/Art~] ',
+        setg: { prompt: '[[b;lawngreen;black]william.qin:/Projects/Random~] ',
                 name:   'william.qin',
                 completion: function(string, callback) {
                     callback([
@@ -102,16 +102,32 @@ var art =
               }
     };
 
+var earthground = 
+    {
+      name: "earthground.git",
+      type: "pdf",
+      link: "https://github.com/wqill/earthground"
+    };
+
+var dropdown = 
+    {
+      name: "dropdown-game.git",
+      type: "pdf",
+      link: "https://github.com/wqill/DropDown"
+    };
+
 var coding = 
     {
         name: "Coding",
         type: "folder",
-        kids: [],
+        kids: [earthground, dropdown],
         back: projects,
         setg: { prompt: '[[b;lawngreen;black]william.qin:/Projects/Coding~] ',
                 name:   'william.qin',
                 completion: function(string, callback) {
                     callback([
+                            'earthground.git',
+                            'dropdown-game.git'
                               ]);},
               }
     };
@@ -138,14 +154,14 @@ var projects =
     {
         name: "Projects",
         type: "folder",
-        kids: [art, coding],
+        kids: [random, coding],
         back: home,
         setg: { prompt: '[[b;lawngreen;black]william.qin:/Projects~] ',
                 name:   'william.qin',
                 completion: function(string, callback) {
                     callback([
                               'Coding',
-                              'Art',
+                              'Random',
                               ]);},
               }
     };
@@ -172,5 +188,5 @@ var home =
 
 aboutme.back = home;
 projects.back = home;
-art.back = projects;
+random.back = projects;
 coding.back = projects;
